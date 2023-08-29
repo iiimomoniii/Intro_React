@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+export default ()=>{
+
+  const var1 = 0;
+  const var2 = "hello";
+  const var3 = true;
+  const var4 = false;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div>
+      <h1>Number {var1}</h1> 
+      <h1>String {var2}</h1> 
+      <h1>Boolean {var3 == true && "true"}</h1> 
+      <h1>Boolean Condition{var4 ? <h1>Yes</h1> : <h1>No</h1>}</h1>
     </div>
-  );
+  )
+  
 }
-
-export default App;
