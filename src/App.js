@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       <Ex1Image/>
+      <Ex1Image image="/images/giphy.gif"/>
     </div>
   );
 }
