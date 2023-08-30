@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types';
 export default function ex1_props(props) {
   return (
     <div>
@@ -7,4 +7,8 @@ export default function ex1_props(props) {
         <h1 style={{color: props.color}}>{props.count}</h1>
     </div>
   )
+}
+
+ex1_props.propTypes = {
+    count: PropTypes.number
 }
