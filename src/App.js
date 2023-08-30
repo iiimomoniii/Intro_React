@@ -8,7 +8,7 @@ function App() {
       <button onClick={()=>{
         setCount(count+1)
       }}>Add</button>
-      <Ex1Props count={count} color="#f00" showLabel={true}/>
+      <Ex1Props count={count} color="#f00" showLabel/>
     </div>
   );
 }

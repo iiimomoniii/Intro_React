@@ -10,5 +10,11 @@ export default function ex1_props(props) {
 }
 
 ex1_props.propTypes = {
-    count: PropTypes.number
-}
+    count: PropTypes.number,
+    showLabel : PropTypes.bool
+};
+
+
+ex1_props.defaultProps = {
+    showLabel : false
+};
