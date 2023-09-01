@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Ex1_funct from './components/ex1_functional_props_custom_event_listeners';
 function App() {
+  const submit = () =>{
+    alert("Hey from variable");
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/*pass alert from function*/}
+      <Ex1_funct handleSubmit={()=>{alert("Hey from function")}}/>
+       {/*pass alert from function short form*/}
+      <Ex1_funct handleSubmit={()=>alert("Hey from function")}/>
+      {/*pass alert from variable*/}
+      <Ex1_funct handleSubmit={submit}/>
     </div>
   );
 }
