@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 
 export default function Ex1_useState() {
-  const [account, setAccount] = useState({username : "", password : ""});
+  const initialState = {username : "", password : ""};
+  const [account, setAccount] = useState(initialState);
   return (
     <div>
       <p >#Debug {JSON.stringify(account)}</p>
@@ -31,7 +32,7 @@ export default function Ex1_useState() {
            {/*no re-fresh*/}
           e.preventDefault();
           {/*clear object*/}
-          setAccount({username : "", password : ""})
+          setAccount(initialState)
         }}>Clear</button>
       </form>
     </div>
