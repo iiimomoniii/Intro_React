@@ -1,23 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-
+import EX1_destructuring from './components/ex1_destructuring';
+import EX2_destructuring_variable from './components/ex2_destructuring_variable';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/*destructuring*/}
+      <EX1_destructuring usernameHint="Username" passwordHint="Password" />
+      {/*destructuring_variable*/}
+      <EX2_destructuring_variable/>
     </div>
   );
 }
