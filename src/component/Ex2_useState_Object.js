@@ -9,18 +9,25 @@ export default function Ex1_useState() {
       <form action="">
         <input type="text" placeholder="Username" 
           onChange={e=>{
-            setAccount({username : e.target.value, password : account.password})
+            {/*set updated username and other value in dictionary of account*/}
+            setAccount({...account, username : e.target.value})
           }}
         />
         <br />
         <input type="text" placeholder="Password"
           onChange={e=>{
-            setAccount({username : account.username, password : e.target.value})
+            {/*set updated password and other value in dictionary of account*/}
+            setAccount({...account, password : e.target.value})
           }}
         />
         <br/>
-        <button type="submit">Submit</button>
-        <button>Clear</button>
+        {/*alert updated account*/}
+        <button type="submit" onClick={(e)=>{
+          {/*no re-fresh*/}
+          e.preventDefault();
+          alert(JSON.stringify(account))
+        }}>Submit</button>
+        <button >Clear</button>
       </form>
     </div>
   );
