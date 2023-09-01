@@ -7,14 +7,14 @@ export default function Ex1_useState() {
     <div>
       <p >#Debug {JSON.stringify(account)}</p>
       <form action="">
-        <input type="text" placeholder="Username" 
+        <input type="text" placeholder="Username" value={account.username}
           onChange={e=>{
             {/*set updated username and other value in dictionary of account*/}
             setAccount({...account, username : e.target.value})
           }}
         />
         <br />
-        <input type="text" placeholder="Password"
+        <input type="text" placeholder="Password" value={account.password}
           onChange={e=>{
             {/*set updated password and other value in dictionary of account*/}
             setAccount({...account, password : e.target.value})
@@ -27,7 +27,12 @@ export default function Ex1_useState() {
           e.preventDefault();
           alert(JSON.stringify(account))
         }}>Submit</button>
-        <button >Clear</button>
+        <button onClick={(e)=>{
+           {/*no re-fresh*/}
+          e.preventDefault();
+          {/*clear object*/}
+          setAccount({username : "", password : ""})
+        }}>Clear</button>
       </form>
     </div>
   );
