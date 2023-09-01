@@ -1,14 +1,12 @@
 import './App.css';
-import {useState} from 'react';
+import Ex1_useState from './component/Ex1_useState';
+import Ex2_useStateObject from './component/Ex2_useState_Object';
 function App() {
-  const [count, setCount] = useState(0);
+  
   return (
     <div className="App">
-      UseState : {count}
-      <br/>
-      <button onClick={()=>{
-        setCount(count+1)
-      }}>Add</button>
+      <Ex1_useState/>
+      <Ex2_useStateObject/>
     </div>
   );
 }
