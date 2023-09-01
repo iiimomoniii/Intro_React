@@ -9,13 +9,13 @@ export default function Ex1_useState() {
       <form action="">
         <input type="text" placeholder="Username" 
           onChange={e=>{
-            setAccount({username : e.target.value})
+            setAccount({username : e.target.value, password : account.password})
           }}
         />
         <br />
         <input type="text" placeholder="Password"
           onChange={e=>{
-            setAccount({password : e.target.value})
+            setAccount({username : account.username, password : e.target.value})
           }}
         />
         <br/>
