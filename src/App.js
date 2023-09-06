@@ -7,6 +7,7 @@ import Ex3_useEffectSetInterval from './components/Ex3_useEffectSetInterval';
 import Ex4_useEffectFeedJSON from './components/Ex4_useEffectFeedJSON';
 import UseContext_Main from './components2/useContext_Main';
 import Ex1_useMemo from './components3/Ex1_useMemo';
+import Ex1_useCallBack from './components4/Ex1_useCallBack';
 function App() {
 
   const [isShow , setIsShow] = useState(true);
@@ -38,8 +39,13 @@ function App() {
     // </div>
 
     //component3
+    // <div>
+    //   <Ex1_useMemo/>
+    // </div>
+
+    //compoment4
     <div>
-      <Ex1_useMemo/>
+      <Ex1_useCallBack/>
     </div>
   );
 }
